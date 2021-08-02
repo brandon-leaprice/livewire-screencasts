@@ -6,7 +6,7 @@
     </head>
 
     <body>
-        @livewire('hello-world', ['name' => 'Jelly'])
+        @livewire('hello-world')
 
 
         @livewireScripts

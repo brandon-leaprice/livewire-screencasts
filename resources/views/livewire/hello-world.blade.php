@@ -1,5 +1,11 @@
 <div>
-    <input wire:model="name" type="text">
+   @foreach($contacts as $contact)
+       @livewire('say-hi', ['contact' => $contact], key($contact->id))
 
-    Hello {{$name}}
+       <button wire:click="removeContact('{{$contact->name}}')">Remove Contact</button>
+    @endforeach
+
+       <hr>
+
+    {{ now() }}
 </div>
