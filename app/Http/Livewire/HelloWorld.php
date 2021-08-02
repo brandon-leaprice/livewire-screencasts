@@ -14,6 +14,11 @@ class HelloWorld extends Component
         $this->contacts = Contact::all();
     }
 
+    public function emitFoo()
+    {
+        $this->emit('emitFoo');
+    }
+
     public function removeContact($name)
     {
         Contact::whereName($name)->first()->delete();

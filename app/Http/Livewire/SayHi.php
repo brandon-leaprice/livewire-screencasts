@@ -9,6 +9,13 @@ class SayHi extends Component
 {
     public $contact;
 
+    protected $listeners = ['emitFoo'];
+
+    public function emitFoo()
+    {
+        $this->emitUp('emitFoo');
+    }
+
     public function mount(Contact $contact)
     {
         $this->$contact = $contact->$contact;
